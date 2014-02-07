@@ -22,9 +22,10 @@ public interface Barco extends Iterable<Coordenada>{
     public boolean verificaHudimiento();
     /**
      * 
+     * @param coordenada
      * @return true si el disparo dió en el blanco, false de lo contrario
      */
-    public boolean verificaDisparo();
+    public boolean verificaDisparo(Coordenada coordenada);
     
     public void posicionaBarco(char posicion, Coordenada coordenada);
     

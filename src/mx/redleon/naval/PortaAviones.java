@@ -6,6 +6,7 @@ package mx.redleon.naval;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 /**
  * Implementa un portaaviones
@@ -18,10 +19,12 @@ public class PortaAviones implements Barco{
      */
     public static final int size = 5;
     
-    private ArrayList<Coordenada> coordenadas;
+    private List<Coordenada> coordenadas;
+    private List<Coordenada> disparos;
     
     public PortaAviones(){
       coordenadas = new ArrayList<>();
+      disparos = new ArrayList<>();
     }
     
     @Override
@@ -65,12 +68,16 @@ public class PortaAviones implements Barco{
 
     @Override
     public boolean verificaHudimiento() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return disparos.containsAll(coordenadas);
     }
 
     @Override
-    public boolean verificaDisparo() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public boolean verificaDisparo(Coordenada coordenada) {
+        boolean resultado = coordenadas.contains(coordenada);
+        if (resultado){
+            disparos.add(coordenada);
+        }        
+        return resultado;
     }
     
     @Override

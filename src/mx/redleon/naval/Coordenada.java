@@ -61,4 +61,11 @@ public class Coordenada {
         return "("+i+","+j+")";
     }
     
+    @Override
+    public boolean equals(Object o){
+        Coordenada coordenada = (Coordenada) o;
+        return coordenada.getI() == this.getI() && coordenada.getJ() == this.getJ();
+        
+    }
+    
 }

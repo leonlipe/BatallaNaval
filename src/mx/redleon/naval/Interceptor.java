@@ -24,7 +24,7 @@ public class Interceptor implements Barco{
     }
 
     @Override
-    public boolean verificaDisparo() {
+    public boolean verificaDisparo(Coordenada coordenada) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

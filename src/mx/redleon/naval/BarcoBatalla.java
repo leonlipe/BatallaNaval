@@ -23,7 +23,7 @@ public class BarcoBatalla implements Barco{
     }
 
     @Override
-    public boolean verificaDisparo() {
+    public boolean verificaDisparo(Coordenada coordenada) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -45,4 +45,6 @@ public class BarcoBatalla implements Barco{
     public int numero() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+   
 }
