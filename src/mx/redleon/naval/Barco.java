@@ -9,7 +9,7 @@ package mx.redleon.naval;
  * que intervienen en el Juego
  * @author leon
  */
-public interface Barco {
+public interface Barco extends Iterable<Coordenada>{
     
     public static final char NORTH ='n';
     public static final char SOUTH ='s';
@@ -27,5 +27,8 @@ public interface Barco {
     public boolean verificaDisparo();
     
     public void posicionaBarco(char posicion, Coordenada coordenada);
+    
+    public String letra();
+    public int numero();
     
 }

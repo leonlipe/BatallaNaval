@@ -5,6 +5,7 @@
 package mx.redleon.naval;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Implementa un portaaviones
@@ -84,6 +85,23 @@ public class PortaAviones implements Barco{
        resultado = resultado.concat("}");
        return resultado;
     }
+
+    @Override
+    public Iterator<Coordenada> iterator() {
+        return coordenadas.iterator();
+    }
+    
+    @Override
+    public String letra(){
+        return "P";
+    }
+
+    @Override
+    public int numero() {
+        return -1;
+    }
+
+   
     
     
 }

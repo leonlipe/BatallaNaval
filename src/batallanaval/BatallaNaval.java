@@ -10,6 +10,7 @@ package batallanaval;
 import mx.redleon.naval.Barco;
 import mx.redleon.naval.Coordenada;
 import mx.redleon.naval.PortaAviones;
+import mx.redleon.naval.Tablero;
 
 /**
  *
@@ -24,7 +25,15 @@ public class BatallaNaval {
         System.out.println("Juego de batalla naval");
         PortaAviones portaAviones = new PortaAviones();
         portaAviones.posicionaBarco(Barco.NORTH, new Coordenada(5,5));
+        PortaAviones portaAviones2 = new PortaAviones();
+        portaAviones2.posicionaBarco(Barco.EAST, new Coordenada(7,5));
         System.out.println(portaAviones);
+        Tablero tablero = new Tablero();
+        System.out.println(tablero);
+        tablero.agregaBarco(portaAviones);
+        tablero.agregaBarco(portaAviones2);
+        tablero.muestraMisBarcos();
+        System.out.println(tablero);
         // TODO code application logic here
     }
     
